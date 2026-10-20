@@ -401,11 +401,10 @@
       setInterval(() => !document.hidden && this.atualizar(), 60000);
       document.addEventListener('visibilitychange', () => !document.hidden && this.atualizar());
     },
-    // No GitHub Pages lê o arquivo publicado ao lado do site; fora dele (arquivo local
-    // ou teste no computador) lê a agenda publicada e, se falhar, a cópia local.
+    // Lê sempre a agenda do site principal, que o GitHub atualiza a cada 15 minutos
+    // (vale também para esta versão publicada em outro repositório). Se falhar, usa a cópia local.
     urls() {
-      const publicada = 'https://lucaspagnota.github.io/banda_3_em_1/assets/agenda.json';
-      return /\.github\.io$/.test(location.hostname) ? ['assets/agenda.json'] : [publicada, 'assets/agenda.json'];
+      return ['https://lucaspagnota.github.io/banda_3_em_1/assets/agenda.json', 'assets/agenda.json'];
     },
     async atualizar() {
       for (const url of this.urls()) {
