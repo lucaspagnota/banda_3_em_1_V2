@@ -245,7 +245,6 @@ window.BANDA = {
     "assets/LUCAS ARTE.jpg": "1080/1350",
     "assets/BANDA 1.jpg": "3840/2564",
     "assets/LUCAS 1.jpg": "2564/3840",
-    "assets/mil-seguidores.jpg": "1254/1254",
     "assets/LEANDRO.jpg": "2564/3840"
   },
   "fotosSobre": [
